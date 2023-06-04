@@ -1,12 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Web Prototype</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://use.typekit.net/slt0jst.css">
 </head>
+
+<header>
+  <h1>today i'm listening to:</h1>
+  <h2>sonar</h2>
+</header>
+
 <body>
-    <h1>heyy</h1>
+  <form id="songform">
+    <div class="form-row">
+      <label for="songName">title:</label>
+     <input type="text" name="songName" id="songName" required="true" />
+    </div>
+
+   <div class="form-row">
+      <label for="songName">album:</label>
+      <input type="text" name="songName" id="songName" required="true" />
+    </div>
+
+   <div class="form-row">
+      <label for="songName">artist:</label>
+     <input type="text" name="songName" id="songName" required="true" />
+   </div>
+
+    <div class="form-row">
+     <label for="songName">vibe:</label>
+     <select name="songName" id="songName">
+       <option disabled selected>Select</option>
+        <option value="chill">Chill</option>
+        <option value="dreamy">Dreamy</option>
+        <option value="hype">Hype</option>
+        <option value="inLove">In Love</option>
+       <option value="sad">Sad</option>
+      </select>
+   </div>
+
+   <div class="container">
+      <label class="toggle-switch">
+        <input type="checkbox">
+        <span class="slider"></span>
+      </fieldset>
+    </div>
+
+    <div class="submit">
+      <input type="submit">
+    </div>
+
+      <ul id="songlist">
+      </ul>
+
 </body>
-</html>
