@@ -32,7 +32,7 @@ function addSong(title, vibe, album, artist) {
     let item = document.createElement("li");
     item.setAttribute("data-id", song.id);
     item.innerHTML = 
-      `<p>${song.title}${song.album}${song.artist}<br>${song.vibe}</p>
+      `<p>${song.vibe}${song.title}${song.artist}</p>
       `;
   
     songlist.appendChild(item);
@@ -56,7 +56,7 @@ function addSong(title, vibe, album, artist) {
       item.remove();
     })
   
-  let checkbox = document.createElement("input");
+  /*let checkbox = document.createElement("input");
   checkbox.type = "checkbox";
     
   item.insertBefore(checkbox, item.firstChild);
@@ -74,5 +74,5 @@ function addSong(title, vibe, album, artist) {
         console.log(songList);
       }
     }
-  });
+  }); */
   }

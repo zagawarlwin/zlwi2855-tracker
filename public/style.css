@@ -8,12 +8,15 @@ html {
     padding-bottom: 50px;
     }
 
+header > h1 {
+  text-align: center;
+}
+
   h1 {
     font-family: "orpheuspro", serif;
     font-weight: 700;
     font-style: normal;
     font-size: 35px;
-    text-align: center;
     color: #725A58;
     margin: auto;
   }
@@ -128,3 +131,50 @@ input[type="checkbox"]:checked + .slider:before {
   margin-block-start: 0;
   padding: 0;
 }
+
+#songlist li {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: #725A58;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+#songlist li p {
+  flex-grow: 1;
+  margin-left: 10px;
+  max-width: 200px;
+}
+#songlist li span {
+  text-align: right;
+  flex-grow: 1;
+  margin-right: 10px;
+  max-width: 200px;
+}
+
+/*#songlist li input[type="checkbox"] {
+  margin-top: 10px;
+  width: 20px;
+  height: 20px;
+}*/
+
+#songlist li button {
+  font-size: 20px;
+  padding: 4px;
+}
+
+section > h2 {
+  font-size: 100px;
+  font-weight: 400px;
+  text-align:left;
+  -webkit-text-stroke-width: 2px;
+  text-shadow: 5px 5px 5px #2E2D2D;
+}
+
+section {
+  margin: px;
+}
+
+
