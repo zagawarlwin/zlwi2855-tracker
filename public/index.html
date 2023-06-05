@@ -16,30 +16,31 @@
 
 <body>
   <form id="songform">
+
     <div class="form-row">
-      <label for="songName">title:</label>
-     <input type="text" name="songName" id="songName" required="true" />
+      <label for="songTitle">title:</label>
+     <input type="text" name="songTitle" id="songTitle" required="true" />
     </div>
 
    <div class="form-row">
-      <label for="songName">album:</label>
-      <input type="text" name="songName" id="songName" required="true" />
+      <label for="songAlbum">album:</label>
+      <input type="text" name="songAlbum" id="songAlbum" required="true" />
     </div>
 
    <div class="form-row">
-      <label for="songName">artist:</label>
-     <input type="text" name="songName" id="songName" required="true" />
+      <label for="songArtist">artist:</label>
+     <input type="text" name="songArtist" id="songArtist" required="true" />
    </div>
 
     <div class="form-row">
-     <label for="songName">vibe:</label>
-     <select name="songName" id="songName">
-       <option disabled selected>Select</option>
-        <option value="chill">Chill</option>
-        <option value="dreamy">Dreamy</option>
-        <option value="hype">Hype</option>
-        <option value="inLove">In Love</option>
-       <option value="sad">Sad</option>
+     <label for="songVibe">vibe:</label>
+     <select id="songVibe" name="songVibe" required="true">
+       <option disabled selected>select</option>
+        <option value="chill">chill</option>
+        <option value="dreamy">dreamy</option>
+        <option value="hype">hype</option>
+        <option value="inLove">in love</option>
+       <option value="sad">sad</option>
       </select>
    </div>
 
@@ -54,7 +55,14 @@
       <input type="submit">
     </div>
 
-      <ul id="songlist">
-      </ul>
+  </form>
 
-</body>
+  <aside>
+    <ul id="songlist">
+    </ul>
+  </aside>
+
+  <script src="script.js"></script>
+</body> 
+
+</html>

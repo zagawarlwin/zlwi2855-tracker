@@ -1,16 +1,20 @@
+
 const form = document.getElementById("songform");
 const songlist = document.getElementById("songlist");
 
 var songList = [];
 
-function addSong(title, album, artist, vibe) {
+function addSong(title, vibe, album, artist) {
     let song = {
       title,
+      vibe,
       album,
       artist,
-      vibe,
+      id: Date.now(),
+      date: new Date() .toISOString(),
+      billable: false
     }
-    taskList.push(song);
+    songList.push(song);
     displaySong(song);
   }
 
@@ -18,9 +22,9 @@ function addSong(title, album, artist, vibe) {
     event.preventDefault();
     addSong(
       form.elements.songTitle.value,
+      form.elements.songVibe.value,
       form.elements.songAlbum.value,
       form.elements.songArtist.value,
-      form.elements.songVibe.value,
     )
   })
 
@@ -28,10 +32,47 @@ function addSong(title, album, artist, vibe) {
     let item = document.createElement("li");
     item.setAttribute("data-id", song.id);
     item.innerHTML = 
-      `<p><strong>${song.title}</strong><br>${song.artist}</p>
+      `<p>${song.title}${song.album}${song.artist}<br>${song.vibe}</p>
       `;
   
-    tasklist.appendChild(item);
+    songlist.appendChild(item);
   
     form.reset();
+
+    let delButton = document.createElement("button");
+    let delButtonText = document.createTextNode("🗑️");
+    delButton.appendChild(delButtonText);
+    item.appendChild(delButton);
+  
+    delButton.addEventListener("click", function(event) {
+  
+      songList.forEach(function(songArrayElement, songArrayIndex) {
+        if (songArrayElement.id == item.getAttribute('data-id')) {
+          songList.splice(songArrayIndex, 1)
+        }
+      })
+  
+      console.log(songList)
+      item.remove();
+    })
+  
+  let checkbox = document.createElement("input");
+  checkbox.type = "checkbox";
+    
+  item.insertBefore(checkbox, item.firstChild);
+  
+  checkbox.addEventListener("change", function(event) {
+    let isChecked = event.target.checked;
+    if (song.id == item.getAttribute("data-id")) {
+      if (isChecked) {
+        item.style.backgroundColor = "rgb(220, 255, 220)";
+        song.billable = true;
+        console.log(songList);
+      } else {
+        item.style.backgroundColor = "white";
+        song.billable = false;
+        console.log(songList);
+      }
+    }
+  });
   }

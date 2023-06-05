@@ -2,7 +2,6 @@ html {
     height: 100%;
     width: 100%;
     background-color: #E2DBC9;
-    
   }
 
   body {
@@ -65,55 +64,6 @@ form {
   flex-grow: 1;
 }
 
-/*
-*{
-  margin: 0;
-  padding: 0;
-}
-
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 110px;
-  height: 60px;
-}
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 283px;
-  background-color: #707070;
-  transition: .4s;
-  border-radius: 50px;
-}
-
-.switch input {display:none}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 50px;
-  width: 50px;
-  left: 5px;
-  bottom: 5px;
-  background-color: #ffffff;
-  transition: 0.4s;
-  border-radius: 50px;
-}
-
-input:checked + .slider
-{
-  background-color: #E2DBC9;
-}
-
-input:checked + .slider:before {
-  transform: translateX(50px);
-}
-
-/* https://www.youtube.com/watch?v=uCjDIMADK0w */
-
 .container {
   display: flex;
   justify-content: center;
@@ -168,4 +118,13 @@ input[type="checkbox"]:checked + .slider:before {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#songlist {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin-block-start: 0;
+  padding: 0;
 }
