@@ -67,7 +67,7 @@ form {
   flex-grow: 1;
 }
 
-.container {
+.switch {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -129,15 +129,18 @@ input[type="checkbox"]:checked + .slider:before {
   flex-direction: column;
   list-style: none;
   margin-block-start: 0;
-  padding: 0;
+  padding: 0
 }
 
 #songlist li {
-  width: 100%;
+  max-width: 1500px;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   background-color: #725A58;
+  border-radius: 30px;
+  box-shadow: 5px 5px 5px #2E2D2D;
+  -webkit-text-fill-color: #E2DBC9;
   padding: 1em;
   margin-bottom: 1em;
 }
@@ -151,7 +154,7 @@ input[type="checkbox"]:checked + .slider:before {
   text-align: right;
   flex-grow: 1;
   margin-right: 10px;
-  max-width: 200px;
+  max-width: 1000px;
 }
 
 /*#songlist li input[type="checkbox"] {
@@ -161,11 +164,11 @@ input[type="checkbox"]:checked + .slider:before {
 }*/
 
 #songlist li button {
-  font-size: 20px;
-  padding: 4px;
+  font-size: 25px;
+  padding: 5px;
 }
 
-section > h2 {
+section > header > h2 {
   font-size: 100px;
   font-weight: 400px;
   text-align:left;
@@ -174,7 +177,13 @@ section > h2 {
 }
 
 section {
-  margin: px;
+  padding: 100px;
 }
+
+h3 {
+  font-family: "orpheuspro", serif;
+  -webkit-text-fill-color: #725A58;
+}
+
 
 

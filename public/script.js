@@ -32,7 +32,8 @@ function addSong(title, vibe, album, artist) {
     let item = document.createElement("li");
     item.setAttribute("data-id", song.id);
     item.innerHTML = 
-      `<p>${song.vibe}${song.title}${song.artist}</p>
+      `<p>${song.vibe}</p><p>${song.title}</p><p>${song.artist}</p>
+      <span></span>
       `;
   
     songlist.appendChild(item);
@@ -75,4 +76,5 @@ function addSong(title, vibe, album, artist) {
       }
     }
   }); */
+
   }
