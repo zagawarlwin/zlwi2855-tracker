@@ -166,6 +166,8 @@ input[type="checkbox"]:checked + .slider:before {
 #songlist li button {
   font-size: 25px;
   padding: 5px;
+  background-color: #725A58;
+  border: none;
 }
 
 section > header > h2 {
@@ -184,6 +186,3 @@ h3 {
   font-family: "orpheuspro", serif;
   -webkit-text-fill-color: #725A58;
 }
-
-
-

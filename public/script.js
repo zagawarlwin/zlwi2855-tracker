@@ -1,6 +1,9 @@
 
 const form = document.getElementById("songform");
 const songlist = document.getElementById("songlist");
+const toggleSwitch = document.getElementById("toggleSwitch");
+const output = document.getElementById("output");
+const image = document.getElementById("image");
 
 var songList = [];
 
@@ -25,15 +28,25 @@ function addSong(title, vibe, album, artist) {
       form.elements.songVibe.value,
       form.elements.songAlbum.value,
       form.elements.songArtist.value,
+      form.elements.toggleSwitch.value,
     )
   })
+
+  toggleSwitch.addEventListener('change', function() {
+    if (toggleSwitch.checked) {
+      output.innerHTML = '<img src="chill.png">';
+    } else {
+      output.innerHTML = '<img src="sad.png">';
+    }
+
+  });
 
   function displaySong(song) {
     let item = document.createElement("li");
     item.setAttribute("data-id", song.id);
     item.innerHTML = 
       `<p>${song.vibe}</p><p>${song.title}</p><p>${song.artist}</p><p>${song.album}</p>
-      <span></span>
+      <span>${output}</span>
       `;
   
     songlist.appendChild(item);
@@ -56,6 +69,7 @@ function addSong(title, vibe, album, artist) {
       console.log(songList)
       item.remove();
     })
+
   
   /*let checkbox = document.createElement("input");
   checkbox.type = "checkbox";
