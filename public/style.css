@@ -158,9 +158,9 @@ input[type="checkbox"]:checked + .slider:before {
 }
 
 /*#songlist li input[type="checkbox"] {
-  margin-top: 10px;
-  width: 20px;
-  height: 20px;
+  margin: 20px;
+  width: 25px;
+  height: 25px;
 }*/
 
 #songlist li button {
@@ -180,6 +180,10 @@ section > header > h2 {
 
 section {
   padding: 100px;
+}
+
+section.favourite {
+  background-color: #2E2D2D;
 }
 
 h3 {
